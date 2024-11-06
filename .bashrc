@@ -1,6 +1,16 @@
 #!/bin/bash
 iatest=$(expr index "$-" i)
 
+tldr --update
+eval $(thefuck --alias huh)
+
+# Source local aliases
+if [ -f ~/.bash_aliases ]; then
+        . .bash_aliases
+fi
+
+clear
+
 #######################################################
 # SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
 #######################################################
@@ -10,7 +20,7 @@ fi
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+        . /etc/bashrc
 fi
 
 # Enable bash programmable completion features in interactive shells
